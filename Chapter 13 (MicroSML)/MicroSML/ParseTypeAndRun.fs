@@ -83,7 +83,7 @@ let compProg' (opt_p,debug_p,verbose_p,eval_p,alpha_p,program,fname) =
               printf "\nResult value: %A\n" r;
               printf "Used: Elapsed %dms, CPU %dms" elapsed (int64 cpu)
             else ()
-    let _ = Comp.compileToFile (opt_p,debug_p,verbose_p,p',fname)
+    let _ = Contcomp.compileToFile (opt_p,debug_p,verbose_p,p',fname)
     printf "\nCompiled to file %s\n" fname
   with 
     Failure eMsg -> printf "ParseTypeAndRun.compProg' ERROR: %s \n" eMsg
