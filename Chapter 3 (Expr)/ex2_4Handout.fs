@@ -1,4 +1,5 @@
-
+module ex2_4Handout
+open Expr
 
 (* Ex 2.4 - assemble to integers *)
 (* SCST = 0, SVAR = 1, SADD = 2, SSUB = 3, SMUL = 4, SPOP = 5, SSWAP = 6; *)

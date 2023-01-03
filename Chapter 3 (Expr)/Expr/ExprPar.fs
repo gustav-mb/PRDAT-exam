@@ -3,7 +3,7 @@ module ExprPar
 #nowarn "64";; // turn off warnings that type variables used in production annotations are instantiated to concrete type
 open FSharp.Text.Lexing
 open FSharp.Text.Parsing.ParseHelpers
-# 1 "ExprPar.fsy"
+# 1 "./Expr/ExprPar.fsy"
 
   (* File Expr/ExprPar.fsy
      Parser specification for the simple expression language.
@@ -11,7 +11,7 @@ open FSharp.Text.Parsing.ParseHelpers
 
   open Absyn
 
-# 14 "ExprPar.fs"
+# 14 ".\Expr\ExprPar.fs"
 // This type is the type of tokens accepted by the parser
 type token = 
   | EOF
@@ -149,122 +149,122 @@ let _fsyacc_reductionSymbolCounts = [|1us; 2us; 1us; 1us; 2us; 3us; 7us; 3us; 3u
 let _fsyacc_productionToNonTerminalTable = [|0us; 1us; 2us; 2us; 2us; 2us; 2us; 2us; 2us; 2us; |]
 let _fsyacc_immediateActions = [|65535us; 49152us; 65535us; 16385us; 16386us; 16387us; 65535us; 16388us; 65535us; 65535us; 16389us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 16390us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; |]
 let _fsyacc_reductions ()  =    [| 
-# 152 "ExprPar.fs"
+# 152 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : Absyn.expr)) in
+            let _1 = parseState.GetInput(1) :?> Absyn.expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
                       raise (FSharp.Text.Parsing.Accept(Microsoft.FSharp.Core.Operators.box _1))
                    )
-                 : '_startMain));
-# 161 "ExprPar.fs"
+                 : 'gentype__startMain));
+# 161 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 25 "ExprPar.fsy"
+# 25 "./Expr/ExprPar.fsy"
                                                                _1                
                    )
-# 25 "ExprPar.fsy"
+# 25 "./Expr/ExprPar.fsy"
                  : Absyn.expr));
-# 172 "ExprPar.fs"
+# 172 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : string)) in
+            let _1 = parseState.GetInput(1) :?> string in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 29 "ExprPar.fsy"
+# 29 "./Expr/ExprPar.fsy"
                                                                Var _1            
                    )
-# 29 "ExprPar.fsy"
-                 : 'Expr));
-# 183 "ExprPar.fs"
+# 29 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
+# 183 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : int)) in
+            let _1 = parseState.GetInput(1) :?> int in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 30 "ExprPar.fsy"
+# 30 "./Expr/ExprPar.fsy"
                                                                CstI _1           
                    )
-# 30 "ExprPar.fsy"
-                 : 'Expr));
-# 194 "ExprPar.fs"
+# 30 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
+# 194 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : int)) in
+            let _2 = parseState.GetInput(2) :?> int in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 31 "ExprPar.fsy"
+# 31 "./Expr/ExprPar.fsy"
                                                                CstI (- _2)       
                    )
-# 31 "ExprPar.fsy"
-                 : 'Expr));
-# 205 "ExprPar.fs"
+# 31 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
+# 205 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 32 "ExprPar.fsy"
+# 32 "./Expr/ExprPar.fsy"
                                                                _2                
                    )
-# 32 "ExprPar.fsy"
-                 : 'Expr));
-# 216 "ExprPar.fs"
+# 32 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
+# 216 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : string)) in
-            let _4 = (let data = parseState.GetInput(4) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _6 = (let data = parseState.GetInput(6) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _2 = parseState.GetInput(2) :?> string in
+            let _4 = parseState.GetInput(4) :?> 'gentype_Expr in
+            let _6 = parseState.GetInput(6) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 33 "ExprPar.fsy"
+# 33 "./Expr/ExprPar.fsy"
                                                                Let(_2, _4, _6)   
                    )
-# 33 "ExprPar.fsy"
-                 : 'Expr));
-# 229 "ExprPar.fs"
+# 33 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
+# 229 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 34 "ExprPar.fsy"
+# 34 "./Expr/ExprPar.fsy"
                                                                Prim("*", _1, _3) 
                    )
-# 34 "ExprPar.fsy"
-                 : 'Expr));
-# 241 "ExprPar.fs"
+# 34 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
+# 241 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 35 "ExprPar.fsy"
+# 35 "./Expr/ExprPar.fsy"
                                                                Prim("+", _1, _3) 
                    )
-# 35 "ExprPar.fsy"
-                 : 'Expr));
-# 253 "ExprPar.fs"
+# 35 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
+# 253 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 36 "ExprPar.fsy"
+# 36 "./Expr/ExprPar.fsy"
                                                                Prim("-", _1, _3) 
                    )
-# 36 "ExprPar.fsy"
-                 : 'Expr));
+# 36 "./Expr/ExprPar.fsy"
+                 : 'gentype_Expr));
 |]
-# 266 "ExprPar.fs"
-let tables () : FSharp.Text.Parsing.Tables<_> = 
+# 266 ".\Expr\ExprPar.fs"
+let tables : FSharp.Text.Parsing.Tables<_> = 
   { reductions= _fsyacc_reductions ();
     endOfInputTag = _fsyacc_endOfInputTag;
     tagOfToken = tagOfToken;
@@ -284,6 +284,6 @@ let tables () : FSharp.Text.Parsing.Tables<_> =
                               | None -> parse_error ctxt.Message);
     numTerminals = 16;
     productionToNonTerminalTable = _fsyacc_productionToNonTerminalTable  }
-let engine lexer lexbuf startState = (tables ()).Interpret(lexer, lexbuf, startState)
+let engine lexer lexbuf startState = tables.Interpret(lexer, lexbuf, startState)
 let Main lexer lexbuf : Absyn.expr =
-    Microsoft.FSharp.Core.Operators.unbox ((tables ()).Interpret(lexer, lexbuf, 0))
+    engine lexer lexbuf 0 :?> _

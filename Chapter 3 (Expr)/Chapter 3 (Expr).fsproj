@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>Chapter_3__Expr_</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <fsLex Include="./Expr/ExprLex.fsl">
+      <OtherFlags>--unicode -o ".\Expr\ExprLex.fs"</OtherFlags>
+    </fsLex>
+    <fsyacc Include="./Expr/ExprPar.fsy">
+      <OtherFlags>--module ExprPar -o ".\Expr\ExprPar.fs"</OtherFlags>
+    </fsyacc>
+    <fsLex Include="./HelloLex/hello.fsl">
+      <OtherFlags>--unicode -o ".\HelloLex\HelloLex.fs"</OtherFlags>
+    </fsLex>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include=".\Expr\Absyn.fs" />
+    <Compile Include=".\Expr\ExprPar.fsi" />
+    <Compile Include=".\Expr\ExprPar.fs" />
+    <Compile Include=".\Expr\ExprLex.fs" />
+    <Compile Include=".\Expr\Parse.fs" />
+    <Compile Include=".\Expr\Expr.fs" />
+    <Compile Include=".\ex2_4Handout.fs" />
+    <Compile Include=".\HelloLex\HelloLex.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fslexyacc" Version="10.2.0" />
+    <PackageReference Include="fslexyacc.Runtime" Version="10.2.0" />
+  </ItemGroup>
+
+</Project>
