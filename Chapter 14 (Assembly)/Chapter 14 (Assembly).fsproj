@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>Chapter_14__Assembly_</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <fsLex Include=".\Assembly\CLex.fsl">
+      <OtherFlags>--unicode -o ".\Assembly\CLex.fs"</OtherFlags>
+    </fsLex>
+    <fsyacc Include=".\Assembly\CPar.fsy">
+      <OtherFlags>--module CPar -o ".\Assembly\CPar.fs"</OtherFlags>
+    </fsyacc>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include=".\Assembly\Absyn.fs" />
+    <Compile Include=".\Assembly\CPar.fsi" />
+    <Compile Include=".\Assembly\CPar.fs" />
+    <Compile Include=".\Assembly\CLex.fs" />
+    <Compile Include=".\Assembly\X86.fs" />
+    <Compile Include=".\Assembly\X86Comp.fs" />
+    <Compile Include=".\Assembly\Parse.fs" />
+    <Compile Include=".\Assembly\ParseAndComp.fs" />
+    <Compile Include=".\Assembly\MicroCCAsm.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fslexyacc" Version="10.2.0" />
+    <PackageReference Include="fslexyacc.Runtime" Version="10.2.0" />
+  </ItemGroup>
+
+</Project>

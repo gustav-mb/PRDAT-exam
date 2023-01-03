@@ -3,7 +3,7 @@ module CPar
 #nowarn "64";; // turn off warnings that type variables used in production annotations are instantiated to concrete type
 open FSharp.Text.Lexing
 open FSharp.Text.Parsing.ParseHelpers
-# 1 "CPar.fsy"
+# 1 ".\Assembly\CPar.fsy"
 
 (*	File MicroC/CPar.fsy 
 	Parser specification for micro-C, a small imperative language
@@ -16,7 +16,7 @@ open Absyn
 let compose1 f (g, s) = ((fun x -> g(f(x))), s)
 let nl = CstI 10
 
-# 19 "CPar.fs"
+# 19 ".\Assembly\CPar.fs"
 // This type is the type of tokens accepted by the parser
 type token = 
   | EOF
@@ -391,825 +391,825 @@ let _fsyacc_reductionSymbolCounts = [|1us; 2us; 0us; 2us; 2us; 1us; 2us; 1us; 2u
 let _fsyacc_productionToNonTerminalTable = [|0us; 1us; 2us; 2us; 3us; 3us; 4us; 5us; 5us; 5us; 5us; 5us; 6us; 6us; 7us; 7us; 8us; 8us; 9us; 10us; 10us; 10us; 11us; 11us; 12us; 12us; 12us; 12us; 12us; 12us; 13us; 13us; 13us; 14us; 14us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 15us; 16us; 16us; 16us; 17us; 17us; 17us; 17us; 17us; 18us; 18us; 19us; 19us; 20us; 20us; 20us; 20us; 21us; 21us; |]
 let _fsyacc_immediateActions = [|65535us; 49152us; 65535us; 16385us; 65535us; 16387us; 65535us; 16388us; 16389us; 65535us; 65535us; 65535us; 16391us; 65535us; 65535us; 65535us; 65535us; 65535us; 16393us; 65535us; 16394us; 65535us; 16395us; 65535us; 65535us; 65535us; 65535us; 65535us; 16396us; 65535us; 65535us; 65535us; 16397us; 16399us; 65535us; 65535us; 16401us; 65535us; 65535us; 16402us; 65535us; 16404us; 65535us; 65535us; 16405us; 16406us; 65535us; 16407us; 65535us; 16408us; 65535us; 16409us; 65535us; 16410us; 16411us; 65535us; 65535us; 65535us; 65535us; 65535us; 16412us; 65535us; 65535us; 65535us; 65535us; 16413us; 16414us; 16415us; 16416us; 65535us; 65535us; 16418us; 65535us; 16419us; 65535us; 65535us; 65535us; 65535us; 65535us; 16421us; 65535us; 65535us; 65535us; 65535us; 16424us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 65535us; 16438us; 65535us; 16439us; 65535us; 65535us; 16441us; 65535us; 65535us; 16442us; 65535us; 65535us; 16444us; 65535us; 16445us; 16447us; 65535us; 16449us; 16450us; 16451us; 65535us; 16452us; 16453us; 16454us; 16455us; |]
 let _fsyacc_reductions ()  =    [| 
-# 394 "CPar.fs"
+# 394 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : Absyn.program)) in
+            let _1 = parseState.GetInput(1) :?> Absyn.program in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
                       raise (FSharp.Text.Parsing.Accept(Microsoft.FSharp.Core.Operators.box _1))
                    )
-                 : '_startMain));
-# 403 "CPar.fs"
+                 : 'gentype__startMain));
+# 403 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Topdecs)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Topdecs in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 41 "CPar.fsy"
+# 41 ".\Assembly\CPar.fsy"
                                                                Prog _1 
                    )
-# 41 "CPar.fsy"
+# 41 ".\Assembly\CPar.fsy"
                  : Absyn.program));
-# 414 "CPar.fs"
+# 414 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 45 "CPar.fsy"
+# 45 ".\Assembly\CPar.fsy"
                                                                [] 
                    )
-# 45 "CPar.fsy"
-                 : 'Topdecs));
-# 424 "CPar.fs"
+# 45 ".\Assembly\CPar.fsy"
+                 : 'gentype_Topdecs));
+# 424 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Topdec)) in
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Topdecs)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Topdec in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Topdecs in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 46 "CPar.fsy"
+# 46 ".\Assembly\CPar.fsy"
                                                                _1 :: _2 
                    )
-# 46 "CPar.fsy"
-                 : 'Topdecs));
-# 436 "CPar.fs"
+# 46 ".\Assembly\CPar.fsy"
+                 : 'gentype_Topdecs));
+# 436 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardec)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Vardec in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 50 "CPar.fsy"
+# 50 ".\Assembly\CPar.fsy"
                                                                Vardec (fst _1, snd _1) 
                    )
-# 50 "CPar.fsy"
-                 : 'Topdec));
-# 447 "CPar.fs"
+# 50 ".\Assembly\CPar.fsy"
+                 : 'gentype_Topdec));
+# 447 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Fundec)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Fundec in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 51 "CPar.fsy"
+# 51 ".\Assembly\CPar.fsy"
                                                                _1 
                    )
-# 51 "CPar.fsy"
-                 : 'Topdec));
-# 458 "CPar.fs"
+# 51 ".\Assembly\CPar.fsy"
+                 : 'gentype_Topdec));
+# 458 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Type)) in
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardesc)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Type in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Vardesc in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 55 "CPar.fsy"
+# 55 ".\Assembly\CPar.fsy"
                                                                ((fst _2) _1, snd _2) 
                    )
-# 55 "CPar.fsy"
-                 : 'Vardec));
-# 470 "CPar.fs"
+# 55 ".\Assembly\CPar.fsy"
+                 : 'gentype_Vardec));
+# 470 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : string)) in
+            let _1 = parseState.GetInput(1) :?> string in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 59 "CPar.fsy"
+# 59 ".\Assembly\CPar.fsy"
                                                                ((fun t -> t), _1)                      
                    )
-# 59 "CPar.fsy"
-                 : 'Vardesc));
-# 481 "CPar.fs"
+# 59 ".\Assembly\CPar.fsy"
+                 : 'gentype_Vardesc));
+# 481 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardesc)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Vardesc in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 60 "CPar.fsy"
+# 60 ".\Assembly\CPar.fsy"
                                                                compose1 TypP _2                        
                    )
-# 60 "CPar.fsy"
-                 : 'Vardesc));
-# 492 "CPar.fs"
+# 60 ".\Assembly\CPar.fsy"
+                 : 'gentype_Vardesc));
+# 492 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardesc)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Vardesc in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 61 "CPar.fsy"
+# 61 ".\Assembly\CPar.fsy"
                                                                _2                                      
                    )
-# 61 "CPar.fsy"
-                 : 'Vardesc));
-# 503 "CPar.fs"
+# 61 ".\Assembly\CPar.fsy"
+                 : 'gentype_Vardesc));
+# 503 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardesc)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Vardesc in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 62 "CPar.fsy"
+# 62 ".\Assembly\CPar.fsy"
                                                                compose1 (fun t -> TypA(t, None)) _1    
                    )
-# 62 "CPar.fsy"
-                 : 'Vardesc));
-# 514 "CPar.fs"
+# 62 ".\Assembly\CPar.fsy"
+                 : 'gentype_Vardesc));
+# 514 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardesc)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : int)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Vardesc in
+            let _3 = parseState.GetInput(3) :?> int in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 63 "CPar.fsy"
+# 63 ".\Assembly\CPar.fsy"
                                                                compose1 (fun t -> TypA(t, Some _3)) _1 
                    )
-# 63 "CPar.fsy"
-                 : 'Vardesc));
-# 526 "CPar.fs"
+# 63 ".\Assembly\CPar.fsy"
+                 : 'gentype_Vardesc));
+# 526 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : string)) in
-            let _4 = (let data = parseState.GetInput(4) in (Microsoft.FSharp.Core.Operators.unbox data : 'Paramdecs)) in
-            let _6 = (let data = parseState.GetInput(6) in (Microsoft.FSharp.Core.Operators.unbox data : 'Block)) in
+            let _2 = parseState.GetInput(2) :?> string in
+            let _4 = parseState.GetInput(4) :?> 'gentype_Paramdecs in
+            let _6 = parseState.GetInput(6) :?> 'gentype_Block in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 67 "CPar.fsy"
+# 67 ".\Assembly\CPar.fsy"
                                                                Fundec(None,     _2, _4, _6) 
                    )
-# 67 "CPar.fsy"
-                 : 'Fundec));
-# 539 "CPar.fs"
+# 67 ".\Assembly\CPar.fsy"
+                 : 'gentype_Fundec));
+# 539 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Type)) in
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : string)) in
-            let _4 = (let data = parseState.GetInput(4) in (Microsoft.FSharp.Core.Operators.unbox data : 'Paramdecs)) in
-            let _6 = (let data = parseState.GetInput(6) in (Microsoft.FSharp.Core.Operators.unbox data : 'Block)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Type in
+            let _2 = parseState.GetInput(2) :?> string in
+            let _4 = parseState.GetInput(4) :?> 'gentype_Paramdecs in
+            let _6 = parseState.GetInput(6) :?> 'gentype_Block in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 68 "CPar.fsy"
+# 68 ".\Assembly\CPar.fsy"
                                                                Fundec(Some(_1), _2, _4, _6) 
                    )
-# 68 "CPar.fsy"
-                 : 'Fundec));
-# 553 "CPar.fs"
+# 68 ".\Assembly\CPar.fsy"
+                 : 'gentype_Fundec));
+# 553 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 72 "CPar.fsy"
+# 72 ".\Assembly\CPar.fsy"
                                                                [] 
                    )
-# 72 "CPar.fsy"
-                 : 'Paramdecs));
-# 563 "CPar.fs"
+# 72 ".\Assembly\CPar.fsy"
+                 : 'gentype_Paramdecs));
+# 563 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Paramdecs1)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Paramdecs1 in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 73 "CPar.fsy"
+# 73 ".\Assembly\CPar.fsy"
                                                                _1 
                    )
-# 73 "CPar.fsy"
-                 : 'Paramdecs));
-# 574 "CPar.fs"
+# 73 ".\Assembly\CPar.fsy"
+                 : 'gentype_Paramdecs));
+# 574 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardec)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Vardec in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 77 "CPar.fsy"
+# 77 ".\Assembly\CPar.fsy"
                                                                [_1]     
                    )
-# 77 "CPar.fsy"
-                 : 'Paramdecs1));
-# 585 "CPar.fs"
+# 77 ".\Assembly\CPar.fsy"
+                 : 'gentype_Paramdecs1));
+# 585 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardec)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Paramdecs1)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Vardec in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Paramdecs1 in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 78 "CPar.fsy"
+# 78 ".\Assembly\CPar.fsy"
                                                                _1 :: _3 
                    )
-# 78 "CPar.fsy"
-                 : 'Paramdecs1));
-# 597 "CPar.fs"
+# 78 ".\Assembly\CPar.fsy"
+                 : 'gentype_Paramdecs1));
+# 597 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtOrDecSeq)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_StmtOrDecSeq in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 82 "CPar.fsy"
+# 82 ".\Assembly\CPar.fsy"
                                                                Block _2 
                    )
-# 82 "CPar.fsy"
-                 : 'Block));
-# 608 "CPar.fs"
+# 82 ".\Assembly\CPar.fsy"
+                 : 'gentype_Block));
+# 608 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 86 "CPar.fsy"
+# 86 ".\Assembly\CPar.fsy"
                                                                [] 
                    )
-# 86 "CPar.fsy"
-                 : 'StmtOrDecSeq));
-# 618 "CPar.fs"
+# 86 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtOrDecSeq));
+# 618 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Stmt)) in
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtOrDecSeq)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Stmt in
+            let _2 = parseState.GetInput(2) :?> 'gentype_StmtOrDecSeq in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 87 "CPar.fsy"
+# 87 ".\Assembly\CPar.fsy"
                                                                Stmt _1 :: _2 
                    )
-# 87 "CPar.fsy"
-                 : 'StmtOrDecSeq));
-# 630 "CPar.fs"
+# 87 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtOrDecSeq));
+# 630 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Vardec)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtOrDecSeq)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Vardec in
+            let _3 = parseState.GetInput(3) :?> 'gentype_StmtOrDecSeq in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 88 "CPar.fsy"
+# 88 ".\Assembly\CPar.fsy"
                                                                Dec (fst _1, snd _1) :: _3 
                    )
-# 88 "CPar.fsy"
-                 : 'StmtOrDecSeq));
-# 642 "CPar.fs"
+# 88 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtOrDecSeq));
+# 642 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtM)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_StmtM in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 92 "CPar.fsy"
+# 92 ".\Assembly\CPar.fsy"
                                                                _1 
                    )
-# 92 "CPar.fsy"
-                 : 'Stmt));
-# 653 "CPar.fs"
+# 92 ".\Assembly\CPar.fsy"
+                 : 'gentype_Stmt));
+# 653 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtU)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_StmtU in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 93 "CPar.fsy"
+# 93 ".\Assembly\CPar.fsy"
                                                                _1 
                    )
-# 93 "CPar.fsy"
-                 : 'Stmt));
-# 664 "CPar.fs"
+# 93 ".\Assembly\CPar.fsy"
+                 : 'gentype_Stmt));
+# 664 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 97 "CPar.fsy"
+# 97 ".\Assembly\CPar.fsy"
                                                                Expr(_1)             
                    )
-# 97 "CPar.fsy"
-                 : 'StmtM));
-# 675 "CPar.fs"
+# 97 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtM));
+# 675 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 98 "CPar.fsy"
+# 98 ".\Assembly\CPar.fsy"
                                                                Return None          
                    )
-# 98 "CPar.fsy"
-                 : 'StmtM));
-# 685 "CPar.fs"
+# 98 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtM));
+# 685 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 99 "CPar.fsy"
+# 99 ".\Assembly\CPar.fsy"
                                                                Return(Some(_2))     
                    )
-# 99 "CPar.fsy"
-                 : 'StmtM));
-# 696 "CPar.fs"
+# 99 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtM));
+# 696 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Block)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Block in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 100 "CPar.fsy"
+# 100 ".\Assembly\CPar.fsy"
                                                                _1                   
                    )
-# 100 "CPar.fsy"
-                 : 'StmtM));
-# 707 "CPar.fs"
+# 100 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtM));
+# 707 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _5 = (let data = parseState.GetInput(5) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtM)) in
-            let _7 = (let data = parseState.GetInput(7) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtM)) in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
+            let _5 = parseState.GetInput(5) :?> 'gentype_StmtM in
+            let _7 = parseState.GetInput(7) :?> 'gentype_StmtM in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 101 "CPar.fsy"
+# 101 ".\Assembly\CPar.fsy"
                                                                If(_3, _5, _7)       
                    )
-# 101 "CPar.fsy"
-                 : 'StmtM));
-# 720 "CPar.fs"
+# 101 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtM));
+# 720 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _5 = (let data = parseState.GetInput(5) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtM)) in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
+            let _5 = parseState.GetInput(5) :?> 'gentype_StmtM in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 102 "CPar.fsy"
+# 102 ".\Assembly\CPar.fsy"
                                                                While(_3, _5)        
                    )
-# 102 "CPar.fsy"
-                 : 'StmtM));
-# 732 "CPar.fs"
+# 102 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtM));
+# 732 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _5 = (let data = parseState.GetInput(5) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtM)) in
-            let _7 = (let data = parseState.GetInput(7) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtU)) in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
+            let _5 = parseState.GetInput(5) :?> 'gentype_StmtM in
+            let _7 = parseState.GetInput(7) :?> 'gentype_StmtU in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 106 "CPar.fsy"
+# 106 ".\Assembly\CPar.fsy"
                                                                If(_3, _5, _7)       
                    )
-# 106 "CPar.fsy"
-                 : 'StmtU));
-# 745 "CPar.fs"
+# 106 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtU));
+# 745 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _5 = (let data = parseState.GetInput(5) in (Microsoft.FSharp.Core.Operators.unbox data : 'Stmt)) in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
+            let _5 = parseState.GetInput(5) :?> 'gentype_Stmt in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 107 "CPar.fsy"
+# 107 ".\Assembly\CPar.fsy"
                                                                If(_3, _5, Block []) 
                    )
-# 107 "CPar.fsy"
-                 : 'StmtU));
-# 757 "CPar.fs"
+# 107 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtU));
+# 757 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _5 = (let data = parseState.GetInput(5) in (Microsoft.FSharp.Core.Operators.unbox data : 'StmtU)) in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
+            let _5 = parseState.GetInput(5) :?> 'gentype_StmtU in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 108 "CPar.fsy"
+# 108 ".\Assembly\CPar.fsy"
                                                                While(_3, _5)        
                    )
-# 108 "CPar.fsy"
-                 : 'StmtU));
-# 769 "CPar.fs"
+# 108 ".\Assembly\CPar.fsy"
+                 : 'gentype_StmtU));
+# 769 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Access)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Access in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 112 "CPar.fsy"
+# 112 ".\Assembly\CPar.fsy"
                                                                Access _1           
                    )
-# 112 "CPar.fsy"
-                 : 'Expr));
-# 780 "CPar.fs"
+# 112 ".\Assembly\CPar.fsy"
+                 : 'gentype_Expr));
+# 780 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'ExprNotAccess)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_ExprNotAccess in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 113 "CPar.fsy"
+# 113 ".\Assembly\CPar.fsy"
                                                                _1                  
                    )
-# 113 "CPar.fsy"
-                 : 'Expr));
-# 791 "CPar.fs"
+# 113 ".\Assembly\CPar.fsy"
+                 : 'gentype_Expr));
+# 791 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'AtExprNotAccess)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_AtExprNotAccess in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 117 "CPar.fsy"
+# 117 ".\Assembly\CPar.fsy"
                                                                _1                  
                    )
-# 117 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 802 "CPar.fs"
+# 117 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 802 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Access)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Access in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 118 "CPar.fsy"
+# 118 ".\Assembly\CPar.fsy"
                                                                Assign(_1, _3)      
                    )
-# 118 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 814 "CPar.fs"
+# 118 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 814 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : string)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Exprs)) in
+            let _1 = parseState.GetInput(1) :?> string in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Exprs in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 119 "CPar.fsy"
+# 119 ".\Assembly\CPar.fsy"
                                                                Call(_1, _3)        
                    )
-# 119 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 826 "CPar.fs"
+# 119 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 826 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 120 "CPar.fsy"
+# 120 ".\Assembly\CPar.fsy"
                                                                Prim1("!", _2)      
                    )
-# 120 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 837 "CPar.fs"
+# 120 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 837 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 121 "CPar.fsy"
+# 121 ".\Assembly\CPar.fsy"
                                                                Prim1("printi", _2) 
                    )
-# 121 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 848 "CPar.fs"
+# 121 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 848 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 122 "CPar.fsy"
+# 122 ".\Assembly\CPar.fsy"
                                                                Prim1("printc", nl) 
                    )
-# 122 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 858 "CPar.fs"
+# 122 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 858 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 123 "CPar.fsy"
+# 123 ".\Assembly\CPar.fsy"
                                                                Prim2("+",  _1, _3) 
                    )
-# 123 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 870 "CPar.fs"
+# 123 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 870 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 124 "CPar.fsy"
+# 124 ".\Assembly\CPar.fsy"
                                                                Prim2("-",  _1, _3) 
                    )
-# 124 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 882 "CPar.fs"
+# 124 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 882 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 125 "CPar.fsy"
+# 125 ".\Assembly\CPar.fsy"
                                                                Prim2("*",  _1, _3) 
                    )
-# 125 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 894 "CPar.fs"
+# 125 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 894 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 126 "CPar.fsy"
+# 126 ".\Assembly\CPar.fsy"
                                                                Prim2("/",  _1, _3) 
                    )
-# 126 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 906 "CPar.fs"
+# 126 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 906 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 127 "CPar.fsy"
+# 127 ".\Assembly\CPar.fsy"
                                                                Prim2("%",  _1, _3) 
                    )
-# 127 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 918 "CPar.fs"
+# 127 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 918 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 128 "CPar.fsy"
+# 128 ".\Assembly\CPar.fsy"
                                                                Prim2("==", _1, _3) 
                    )
-# 128 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 930 "CPar.fs"
+# 128 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 930 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 129 "CPar.fsy"
+# 129 ".\Assembly\CPar.fsy"
                                                                Prim2("!=", _1, _3) 
                    )
-# 129 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 942 "CPar.fs"
+# 129 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 942 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 130 "CPar.fsy"
+# 130 ".\Assembly\CPar.fsy"
                                                                Prim2(">",  _1, _3) 
                    )
-# 130 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 954 "CPar.fs"
+# 130 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 954 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 131 "CPar.fsy"
+# 131 ".\Assembly\CPar.fsy"
                                                                Prim2("<",  _1, _3) 
                    )
-# 131 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 966 "CPar.fs"
+# 131 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 966 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 132 "CPar.fsy"
+# 132 ".\Assembly\CPar.fsy"
                                                                Prim2(">=", _1, _3) 
                    )
-# 132 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 978 "CPar.fs"
+# 132 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 978 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 133 "CPar.fsy"
+# 133 ".\Assembly\CPar.fsy"
                                                                Prim2("<=", _1, _3) 
                    )
-# 133 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 990 "CPar.fs"
+# 133 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 990 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 134 "CPar.fsy"
+# 134 ".\Assembly\CPar.fsy"
                                                                Andalso(_1, _3)     
                    )
-# 134 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 1002 "CPar.fs"
+# 134 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 1002 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 135 "CPar.fsy"
+# 135 ".\Assembly\CPar.fsy"
                                                                Orelse(_1, _3)      
                    )
-# 135 "CPar.fsy"
-                 : 'ExprNotAccess));
-# 1014 "CPar.fs"
+# 135 ".\Assembly\CPar.fsy"
+                 : 'gentype_ExprNotAccess));
+# 1014 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Const)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Const in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 139 "CPar.fsy"
+# 139 ".\Assembly\CPar.fsy"
                                                                CstI _1             
                    )
-# 139 "CPar.fsy"
-                 : 'AtExprNotAccess));
-# 1025 "CPar.fs"
+# 139 ".\Assembly\CPar.fsy"
+                 : 'gentype_AtExprNotAccess));
+# 1025 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'ExprNotAccess)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_ExprNotAccess in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 140 "CPar.fsy"
+# 140 ".\Assembly\CPar.fsy"
                                                                _2                  
                    )
-# 140 "CPar.fsy"
-                 : 'AtExprNotAccess));
-# 1036 "CPar.fs"
+# 140 ".\Assembly\CPar.fsy"
+                 : 'gentype_AtExprNotAccess));
+# 1036 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Access)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Access in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 141 "CPar.fsy"
+# 141 ".\Assembly\CPar.fsy"
                                                                Addr _2             
                    )
-# 141 "CPar.fsy"
-                 : 'AtExprNotAccess));
-# 1047 "CPar.fs"
+# 141 ".\Assembly\CPar.fsy"
+                 : 'gentype_AtExprNotAccess));
+# 1047 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : string)) in
+            let _1 = parseState.GetInput(1) :?> string in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 145 "CPar.fsy"
+# 145 ".\Assembly\CPar.fsy"
                                                                AccVar _1           
                    )
-# 145 "CPar.fsy"
-                 : 'Access));
-# 1058 "CPar.fs"
+# 145 ".\Assembly\CPar.fsy"
+                 : 'gentype_Access));
+# 1058 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Access)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Access in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 146 "CPar.fsy"
+# 146 ".\Assembly\CPar.fsy"
                                                                _2                  
                    )
-# 146 "CPar.fsy"
-                 : 'Access));
-# 1069 "CPar.fs"
+# 146 ".\Assembly\CPar.fsy"
+                 : 'gentype_Access));
+# 1069 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'Access)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_Access in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 147 "CPar.fsy"
+# 147 ".\Assembly\CPar.fsy"
                                                                AccDeref (Access _2)
                    )
-# 147 "CPar.fsy"
-                 : 'Access));
-# 1080 "CPar.fs"
+# 147 ".\Assembly\CPar.fsy"
+                 : 'gentype_Access));
+# 1080 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : 'AtExprNotAccess)) in
+            let _2 = parseState.GetInput(2) :?> 'gentype_AtExprNotAccess in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 148 "CPar.fsy"
+# 148 ".\Assembly\CPar.fsy"
                                                                AccDeref _2         
                    )
-# 148 "CPar.fsy"
-                 : 'Access));
-# 1091 "CPar.fs"
+# 148 ".\Assembly\CPar.fsy"
+                 : 'gentype_Access));
+# 1091 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Access)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Access in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 149 "CPar.fsy"
+# 149 ".\Assembly\CPar.fsy"
                                                                AccIndex(_1, _3)    
                    )
-# 149 "CPar.fsy"
-                 : 'Access));
-# 1103 "CPar.fs"
+# 149 ".\Assembly\CPar.fsy"
+                 : 'gentype_Access));
+# 1103 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 153 "CPar.fsy"
+# 153 ".\Assembly\CPar.fsy"
                                                                []       
                    )
-# 153 "CPar.fsy"
-                 : 'Exprs));
-# 1113 "CPar.fs"
+# 153 ".\Assembly\CPar.fsy"
+                 : 'gentype_Exprs));
+# 1113 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Exprs1)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Exprs1 in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 154 "CPar.fsy"
+# 154 ".\Assembly\CPar.fsy"
                                                                _1       
                    )
-# 154 "CPar.fsy"
-                 : 'Exprs));
-# 1124 "CPar.fs"
+# 154 ".\Assembly\CPar.fsy"
+                 : 'gentype_Exprs));
+# 1124 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 158 "CPar.fsy"
+# 158 ".\Assembly\CPar.fsy"
                                                                [_1]     
                    )
-# 158 "CPar.fsy"
-                 : 'Exprs1));
-# 1135 "CPar.fs"
+# 158 ".\Assembly\CPar.fsy"
+                 : 'gentype_Exprs1));
+# 1135 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : 'Expr)) in
-            let _3 = (let data = parseState.GetInput(3) in (Microsoft.FSharp.Core.Operators.unbox data : 'Exprs1)) in
+            let _1 = parseState.GetInput(1) :?> 'gentype_Expr in
+            let _3 = parseState.GetInput(3) :?> 'gentype_Exprs1 in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 159 "CPar.fsy"
+# 159 ".\Assembly\CPar.fsy"
                                                                _1 :: _3 
                    )
-# 159 "CPar.fsy"
-                 : 'Exprs1));
-# 1147 "CPar.fs"
+# 159 ".\Assembly\CPar.fsy"
+                 : 'gentype_Exprs1));
+# 1147 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : int)) in
+            let _1 = parseState.GetInput(1) :?> int in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 163 "CPar.fsy"
+# 163 ".\Assembly\CPar.fsy"
                                                                _1       
                    )
-# 163 "CPar.fsy"
-                 : 'Const));
-# 1158 "CPar.fs"
+# 163 ".\Assembly\CPar.fsy"
+                 : 'gentype_Const));
+# 1158 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _1 = (let data = parseState.GetInput(1) in (Microsoft.FSharp.Core.Operators.unbox data : int)) in
+            let _1 = parseState.GetInput(1) :?> int in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 164 "CPar.fsy"
+# 164 ".\Assembly\CPar.fsy"
                                                                _1       
                    )
-# 164 "CPar.fsy"
-                 : 'Const));
-# 1169 "CPar.fs"
+# 164 ".\Assembly\CPar.fsy"
+                 : 'gentype_Const));
+# 1169 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
-            let _2 = (let data = parseState.GetInput(2) in (Microsoft.FSharp.Core.Operators.unbox data : int)) in
+            let _2 = parseState.GetInput(2) :?> int in
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 165 "CPar.fsy"
+# 165 ".\Assembly\CPar.fsy"
                                                                - _2     
                    )
-# 165 "CPar.fsy"
-                 : 'Const));
-# 1180 "CPar.fs"
+# 165 ".\Assembly\CPar.fsy"
+                 : 'gentype_Const));
+# 1180 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 166 "CPar.fsy"
+# 166 ".\Assembly\CPar.fsy"
                                                                -1       
                    )
-# 166 "CPar.fsy"
-                 : 'Const));
-# 1190 "CPar.fs"
+# 166 ".\Assembly\CPar.fsy"
+                 : 'gentype_Const));
+# 1190 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 170 "CPar.fsy"
+# 170 ".\Assembly\CPar.fsy"
                                                                TypI     
                    )
-# 170 "CPar.fsy"
-                 : 'Type));
-# 1200 "CPar.fs"
+# 170 ".\Assembly\CPar.fsy"
+                 : 'gentype_Type));
+# 1200 ".\Assembly\CPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 171 "CPar.fsy"
+# 171 ".\Assembly\CPar.fsy"
                                                                TypC     
                    )
-# 171 "CPar.fsy"
-                 : 'Type));
+# 171 ".\Assembly\CPar.fsy"
+                 : 'gentype_Type));
 |]
-# 1211 "CPar.fs"
-let tables () : FSharp.Text.Parsing.Tables<_> = 
+# 1211 ".\Assembly\CPar.fs"
+let tables : FSharp.Text.Parsing.Tables<_> = 
   { reductions= _fsyacc_reductions ();
     endOfInputTag = _fsyacc_endOfInputTag;
     tagOfToken = tagOfToken;
@@ -1229,6 +1229,6 @@ let tables () : FSharp.Text.Parsing.Tables<_> =
                               | None -> parse_error ctxt.Message);
     numTerminals = 42;
     productionToNonTerminalTable = _fsyacc_productionToNonTerminalTable  }
-let engine lexer lexbuf startState = (tables ()).Interpret(lexer, lexbuf, startState)
+let engine lexer lexbuf startState = tables.Interpret(lexer, lexbuf, startState)
 let Main lexer lexbuf : Absyn.program =
-    Microsoft.FSharp.Core.Operators.unbox ((tables ()).Interpret(lexer, lexbuf, 0))
+    engine lexer lexbuf 0 :?> _
