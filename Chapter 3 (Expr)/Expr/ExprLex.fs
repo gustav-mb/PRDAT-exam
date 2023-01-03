@@ -1,4 +1,4 @@
-# 1 "./Expr/ExprLex.fsl"
+# 1 ".\Expr\ExprLex.fsl"
  
 (* File Expr/Exprlex.fsl
    Lexer specification for the simple expression language.
@@ -63,62 +63,62 @@ let rec _fslex_dummy () = _fslex_dummy()
 and Token  lexbuf =
   match _fslex_tables.Interpret(0,lexbuf) with
   | 0 -> ( 
-# 26 "./Expr/ExprLex.fsl"
+# 26 ".\Expr\ExprLex.fsl"
                                      Token lexbuf 
 # 68 ".\Expr\ExprLex.fs"
           )
   | 1 -> ( 
-# 27 "./Expr/ExprLex.fsl"
+# 27 ".\Expr\ExprLex.fsl"
                                      lexbuf.EndPos <- lexbuf.EndPos.NextLine; Token lexbuf 
 # 73 ".\Expr\ExprLex.fs"
           )
   | 2 -> ( 
-# 28 "./Expr/ExprLex.fsl"
+# 28 ".\Expr\ExprLex.fsl"
                                      CSTINT (System.Int32.Parse (lexemeAsString lexbuf)) 
 # 78 ".\Expr\ExprLex.fs"
           )
   | 3 -> ( 
-# 30 "./Expr/ExprLex.fsl"
+# 30 ".\Expr\ExprLex.fsl"
                                      keyword (lexemeAsString lexbuf) 
 # 83 ".\Expr\ExprLex.fs"
           )
   | 4 -> ( 
-# 31 "./Expr/ExprLex.fsl"
+# 31 ".\Expr\ExprLex.fsl"
                                      PLUS  
 # 88 ".\Expr\ExprLex.fs"
           )
   | 5 -> ( 
-# 32 "./Expr/ExprLex.fsl"
+# 32 ".\Expr\ExprLex.fsl"
                                      MINUS 
 # 93 ".\Expr\ExprLex.fs"
           )
   | 6 -> ( 
-# 33 "./Expr/ExprLex.fsl"
+# 33 ".\Expr\ExprLex.fsl"
                                      TIMES 
 # 98 ".\Expr\ExprLex.fs"
           )
   | 7 -> ( 
-# 34 "./Expr/ExprLex.fsl"
+# 34 ".\Expr\ExprLex.fsl"
                                      EQ    
 # 103 ".\Expr\ExprLex.fs"
           )
   | 8 -> ( 
-# 35 "./Expr/ExprLex.fsl"
+# 35 ".\Expr\ExprLex.fsl"
                                      LPAR  
 # 108 ".\Expr\ExprLex.fs"
           )
   | 9 -> ( 
-# 36 "./Expr/ExprLex.fsl"
+# 36 ".\Expr\ExprLex.fsl"
                                      RPAR  
 # 113 ".\Expr\ExprLex.fs"
           )
   | 10 -> ( 
-# 37 "./Expr/ExprLex.fsl"
+# 37 ".\Expr\ExprLex.fsl"
                                      EOF   
 # 118 ".\Expr\ExprLex.fs"
           )
   | 11 -> ( 
-# 38 "./Expr/ExprLex.fsl"
+# 38 ".\Expr\ExprLex.fsl"
                                      failwith "Lexer error: illegal symbol" 
 # 123 ".\Expr\ExprLex.fs"
           )

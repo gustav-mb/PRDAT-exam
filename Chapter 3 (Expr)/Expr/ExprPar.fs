@@ -3,7 +3,7 @@ module ExprPar
 #nowarn "64";; // turn off warnings that type variables used in production annotations are instantiated to concrete type
 open FSharp.Text.Lexing
 open FSharp.Text.Parsing.ParseHelpers
-# 1 "./Expr/ExprPar.fsy"
+# 1 ".\Expr\ExprPar.fsy"
 
   (* File Expr/ExprPar.fsy
      Parser specification for the simple expression language.
@@ -164,10 +164,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 25 "./Expr/ExprPar.fsy"
+# 25 ".\Expr\ExprPar.fsy"
                                                                _1                
                    )
-# 25 "./Expr/ExprPar.fsy"
+# 25 ".\Expr\ExprPar.fsy"
                  : Absyn.expr));
 # 172 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -175,10 +175,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 29 "./Expr/ExprPar.fsy"
+# 29 ".\Expr\ExprPar.fsy"
                                                                Var _1            
                    )
-# 29 "./Expr/ExprPar.fsy"
+# 29 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 # 183 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -186,10 +186,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 30 "./Expr/ExprPar.fsy"
+# 30 ".\Expr\ExprPar.fsy"
                                                                CstI _1           
                    )
-# 30 "./Expr/ExprPar.fsy"
+# 30 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 # 194 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -197,10 +197,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 31 "./Expr/ExprPar.fsy"
+# 31 ".\Expr\ExprPar.fsy"
                                                                CstI (- _2)       
                    )
-# 31 "./Expr/ExprPar.fsy"
+# 31 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 # 205 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -208,10 +208,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 32 "./Expr/ExprPar.fsy"
+# 32 ".\Expr\ExprPar.fsy"
                                                                _2                
                    )
-# 32 "./Expr/ExprPar.fsy"
+# 32 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 # 216 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -221,10 +221,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 33 "./Expr/ExprPar.fsy"
+# 33 ".\Expr\ExprPar.fsy"
                                                                Let(_2, _4, _6)   
                    )
-# 33 "./Expr/ExprPar.fsy"
+# 33 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 # 229 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -233,10 +233,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 34 "./Expr/ExprPar.fsy"
+# 34 ".\Expr\ExprPar.fsy"
                                                                Prim("*", _1, _3) 
                    )
-# 34 "./Expr/ExprPar.fsy"
+# 34 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 # 241 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -245,10 +245,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 35 "./Expr/ExprPar.fsy"
+# 35 ".\Expr\ExprPar.fsy"
                                                                Prim("+", _1, _3) 
                    )
-# 35 "./Expr/ExprPar.fsy"
+# 35 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 # 253 ".\Expr\ExprPar.fs"
         (fun (parseState : FSharp.Text.Parsing.IParseState) ->
@@ -257,10 +257,10 @@ let _fsyacc_reductions ()  =    [|
             Microsoft.FSharp.Core.Operators.box
                 (
                    (
-# 36 "./Expr/ExprPar.fsy"
+# 36 ".\Expr\ExprPar.fsy"
                                                                Prim("-", _1, _3) 
                    )
-# 36 "./Expr/ExprPar.fsy"
+# 36 ".\Expr\ExprPar.fsy"
                  : 'gentype_Expr));
 |]
 # 266 ".\Expr\ExprPar.fs"

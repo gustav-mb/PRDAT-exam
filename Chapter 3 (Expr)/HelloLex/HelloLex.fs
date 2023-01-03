@@ -1,4 +1,4 @@
-# 1 "./HelloLex/hello.fsl"
+# 1 "./HelloLex\hello.fsl"
   // starting
 
 module Hello_fslex
@@ -22,18 +22,18 @@ let rec _fslex_dummy () = _fslex_dummy()
 and Tokenize  lexbuf =
   match _fslex_tables.Interpret(0,lexbuf) with
   | 0 -> ( 
-# 9 "./HelloLex/hello.fsl"
+# 9 "./HelloLex\hello.fsl"
                                      LexBuffer<char>.LexemeString lexbuf 
 # 27 ".\HelloLex\HelloLex.fs"
           )
   | 1 -> ( 
-# 10 "./HelloLex/hello.fsl"
+# 10 "./HelloLex\hello.fsl"
                                      failwith "Lexer error: illegal symbol" 
 # 32 ".\HelloLex\HelloLex.fs"
           )
   | _ -> failwith "Tokenize"
 
-# 13 "./HelloLex/hello.fsl"
+# 13 "./HelloLex\hello.fsl"
   // ending
 
 [<EntryPoint>]
