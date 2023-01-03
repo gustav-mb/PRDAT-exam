@@ -122,7 +122,7 @@ let rec nsubst (e : expr) (env : (string * expr) list) : expr =
 
 (* Some expressions with free variables: *)
 
-let e6 = Prim("+", Var "y", Var "z");;
+// let e6 = Prim("+", Var "y", Var "z");;
 
 let e6s1 = nsubst e6 [("z", CstI 17)];;
 
@@ -131,22 +131,20 @@ let e6s2 = nsubst e6 [("z", Prim("-", CstI 5, CstI 4))];;
 let e6s3 = nsubst e6 [("z", Prim("+", Var "z", Var "z"))];;
 
 // Shows that only z outside the Let gets substituted:
-let e7 = Prim("+", Let("z", CstI 22, Prim("*", CstI 5, Var "z")),
-                   Var "z");;
+// let e7 = Prim("+", Let("z", CstI 22, Prim("*", CstI 5, Var "z")), Var "z");;
 
 let e7s1 = nsubst e7 [("z", CstI 100)];;
 
 // Shows that only the z in the Let rhs gets substituted
-let e8 = Let("z", Prim("*", CstI 22, Var "z"), Prim("*", CstI 5, Var "z"));;
+// let e8 = Let("z", Prim("*", CstI 22, Var "z"), Prim("*", CstI 5, Var "z"));;
 
 let e8s1 = nsubst e8 [("z", CstI 100)];;
 
 // Shows (wrong) capture of free variable z under the let:
-let e9 = Let("z", CstI 22, Prim("*", Var "y", Var "z"));;
+// let e9 = Let("z", CstI 22, Prim("*", Var "y", Var "z"));;
 
 let e9s1 = nsubst e9 [("y", Var "z")];;
 
-// 
 let e9s2 = nsubst e9 [("z", Prim("-", CstI 5, CstI 4))];;
 
 let newVar : string -> string = 
