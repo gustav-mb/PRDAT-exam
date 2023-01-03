@@ -9,9 +9,9 @@ class TestLinkedList {
     LinkedList<Person> names = new LinkedList<Person>();
     names.add(new Person("Kristen"));
     names.add(new Person("Bjarne"));
-    //    names.add(new Integer(1998));                 // Wrong, compile-time error
+    // names.add(new Integer(1998)); // Wrong, compile-time error
     names.add(new Person("Anders"));
-    Person p = names.get(2);                      // No cast needed
+    Person p = names.get(2); // No cast needed
     System.out.println(p.name);
     System.out.println(f(4));
     System.out.println(f("hfdshs"));
@@ -34,24 +34,26 @@ class TestLinkedList {
 class Person {
   public final String name;
 
-  public Person(String name) { 
+  public Person(String name) {
     this.name = name;
   }
 }
 
 class LinkedList<T> {
-  private Node<T> first, last;  // Invariant: first==null iff last==null
+  private Node<T> first, last; // Invariant: first==null iff last==null
 
   private static class Node<T> {
     public Node<T> prev, next;
     public T item;
 
     public Node(T item) {
-      this.item = item; 
+      this.item = item;
     }
 
     public Node(T item, Node<T> prev, Node<T> next) {
-      this.item = item; this.prev = prev; this.next = next; 
+      this.item = item;
+      this.prev = prev;
+      this.next = next;
     }
   }
 
@@ -65,12 +67,12 @@ class LinkedList<T> {
 
   private Node<T> getNode(int n) {
     Node<T> node = first;
-    for (int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
       node = node.next;
     return node;
   }
 
-  public boolean add(T item) { 
+  public boolean add(T item) {
     if (last == null) // and thus first = null
       first = last = new Node<T>(item);
     else {
@@ -84,7 +86,7 @@ class LinkedList<T> {
   public boolean contains(T item) {
     Node<T> node = first;
     while (node != null) {
-      if (item.equals(node.item)) 
+      if (item.equals(node.item))
         return true;
       node = node.next;
     }
@@ -102,11 +104,11 @@ class LinkedList<T> {
         sb.append(",");
     }
     sb.append("]");
-    return sb.toString();    
+    return sb.toString();
   }
 
   // Corresponds to F# List.map of type 'T list * ('T -> 'R) -> 'R list
-  public <R> LinkedList<R> map(Fun<T,R> f) {
+  public <R> LinkedList<R> map(Fun<T, R> f) {
     LinkedList<R> res = new LinkedList<R>();
     Node<T> node = first;
     while (node != null) {
@@ -119,6 +121,6 @@ class LinkedList<T> {
 
 // Corresponds to an F# or ML function type 'A -> 'R
 
-interface Fun<A,R> {
+interface Fun<A, R> {
   R invoke(A x);
 }
