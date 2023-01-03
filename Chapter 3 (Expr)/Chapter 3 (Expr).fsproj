@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <fsLex Include="./Expr/ExprLex.fsl">
+    <fsLex Include=".\Expr\ExprLex.fsl">
       <OtherFlags>--unicode -o ".\Expr\ExprLex.fs"</OtherFlags>
     </fsLex>
-    <fsyacc Include="./Expr/ExprPar.fsy">
+    <fsyacc Include=".\Expr\ExprPar.fsy">
       <OtherFlags>--module ExprPar -o ".\Expr\ExprPar.fs"</OtherFlags>
     </fsyacc>
-    <fsLex Include="./HelloLex/hello.fsl">
+    <fsLex Include=".\HelloLex\hello.fsl">
       <OtherFlags>--unicode -o ".\HelloLex\HelloLex.fs"</OtherFlags>
     </fsLex>
   </ItemGroup>
