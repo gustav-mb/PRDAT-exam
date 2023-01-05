@@ -35,6 +35,27 @@ To compile each Chapter use `compile.ps1` in the root directory:
 
 </br>
 
+## Lecture-Chapter Mapping
+
+Files from lectures in the [Course Repository](https://github.itu.dk/nh/ProgramsAsDataCodeE2022) have the following mappings to chapters in this project setup:
+
+* Lecture 01: Ch. 1 & 2
+* Lecture 02: Ch. 3
+* Lecture 04: Ch. 4
+* Lecture 05: Ch. 5 & 6
+* Lecture 06: Ch. 7
+* Lecture 09: Ch. 9
+* Lecture 10: Ch. 10
+* Lecture 11: Ch. 11
+* Lecture 13: Ch. 13
+* Lecture 14: Ch. 14
+
+</br>
+
+---
+
+</br>
+
 ## Prerequisites
 
 1. Install `.NET 7` to be able to use run scripts
