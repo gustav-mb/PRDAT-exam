@@ -1,4 +1,4 @@
-# PRDAT-Exam
+# PRDAT-Exam Setup
 
 First, read [Prerequisites](#prerequisites)
 
