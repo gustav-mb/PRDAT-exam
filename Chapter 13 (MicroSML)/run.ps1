@@ -1,4 +1,4 @@
-param([bool]$compile=$false)
+param([bool]$compile = $false)
 
 if ($compile) {
     Write-Host "Compiling msmlmachine.c..."
@@ -8,6 +8,7 @@ if ($compile) {
     Write-Host "Building the micro-SML command line compiler..."
     fsc --standalone -r .\bin\Debug\net7.0\FsLexYacc.Runtime.dll .\MicroSML\Absyn.fs .\MicroSML\FunPar.fs .\MicroSML\FunLex.fs .\MicroSML\TypeInference.fs .\MicroSML\HigherFun.fs .\MicroSML\Machine.fs .\MicroSML\Contcomp.fs .\MicroSML\ParseTypeAndRun.fs .\MicroSML\MicroSMLC.fs -o .\MicroSML\microsmlc.exe
     Write-Host "Done."
-} else {
+}
+else {
     dotnet fsi -r .\bin\Debug\net7.0\FsLexYacc.Runtime.dll .\MicroSML\Absyn.fs .\MicroSML\FunPar.fsi .\MicroSML\FunPar.fs .\MicroSML\FunLex.fs .\MicroSML\TypeInference.fs .\MicroSML\HigherFun.fs .\MicroSML\Machine.fs .\MicroSML\Comp.fs .\MicroSML\Contcomp.fs .\MicroSML\ParseTypeAndRun.fs
 }

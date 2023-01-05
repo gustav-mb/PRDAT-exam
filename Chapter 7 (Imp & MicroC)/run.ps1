@@ -1,4 +1,4 @@
-param([bool]$compile=$false)
+param([bool]$compile = $false)
 
 if ($compile) {
     Write-Host "Compiling Java files..."
@@ -16,6 +16,7 @@ if ($compile) {
     Write-Host "Compiling Parameters.cs..."
     csc .\Imp\Parameters.cs -out:.\Imp\Parameters.exe
     Write-Host "Done."
-} else {
+}
+else {
     dotnet fsi -r .\bin\Debug\net7.0\FsLexYacc.Runtime.dll .\Imp\Naive.fs .\MicroC\Absyn.fs .\MicroC\CPar.fsi .\MicroC\CPar.fs .\MicroC\CLex.fs .\MicroC\Parse.fs .\MicroC\Interp.fs .\MicroC\ParseAndRun.fs .\MicroC\Machine.fs .\MicroC\Comp.fs .\MicroC\Contcomp.fs .\MicroC\ParseAndComp.fs .\MicroC\ParseAndContcomp.fs
 }

@@ -23,14 +23,14 @@
   .ver 0:0:0:0
 }
 .module CircularQueue.exe
-// MVID: {F5031AA1-117F-4AEB-8EB4-4C2B2A2496F4}
+// MVID: {FCACE311-6AC1-49ED-AE7F-AF31C68F56F4}
 .custom instance void System.Runtime.CompilerServices.RefSafetyRulesAttribute::.ctor(int32) = ( 01 00 0B 00 00 00 00 00 ) 
 .imagebase 0x00400000
 .file alignment 0x00000200
 .stackreserve 0x00100000
 .subsystem 0x0003       // WINDOWS_CUI
 .corflags 0x00000001    //  ILONLY
-// Image base: 0x04E90000
+// Image base: 0x05390000
 
 
 // =============== CLASS MEMBERS DECLARATION ===================

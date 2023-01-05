@@ -1,4 +1,4 @@
-param([bool]$compile=$false)
+param([bool]$compile = $false)
 
 if ($compile) {
     Write-Host "Compiling Java files..."
@@ -17,6 +17,7 @@ if ($compile) {
     Write-Host "Compiling listmachine.c..."
     gcc -Wall -g .\ListVM\listmachine.c -o .\ListVM\listmachine.exe 
     Write-Host "Done."
-} else {
+}
+else {
     dotnet fsi -r .\bin\Debug\net7.0\FsLexYacc.Runtime.dll .\ListC\Absyn.fs .\ListC\CPar.fs .\ListC\CLex.fs .\ListC\Parse.fs .\ListC\Machine.fs .\ListC\Comp.fs .\ListC\ParseAndComp.fs
 }

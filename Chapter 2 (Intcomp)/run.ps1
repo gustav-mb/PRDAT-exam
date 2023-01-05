@@ -1,9 +1,10 @@
-param([bool]$compile=$false)
+param([bool]$compile = $false)
 
 if ($compile) {
     Write-Host "Compiling Java files..."
     javac .\Intcomp\Machine.java
     Write-Host "Done."
-} else {
+}
+else {
     dotnet fsi .\Intcomp\Intcomp1.fs
 }

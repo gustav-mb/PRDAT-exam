@@ -1,5 +1,5 @@
 Classfile /C:/Users/Laugu/Desktop/PRDAT-exam/Chapter 9 (Virtual)/virtual/CircularQueue.class
-  Last modified 3. jan. 2023; size 1583 bytes
+  Last modified 5. jan. 2023; size 1583 bytes
   MD5 checksum 59751736d862dd722c109e48f4e99002
   Compiled from "CircularQueue.java"
 class CircularQueue<T extends java.lang.Object> extends java.lang.Object

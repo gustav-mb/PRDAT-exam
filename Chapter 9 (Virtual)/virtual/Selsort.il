@@ -23,14 +23,14 @@
   .ver 0:0:0:0
 }
 .module Selsort.exe
-// MVID: {8751131D-13B4-4739-B74B-D685D6ED1CCD}
+// MVID: {4F0A1417-8321-4247-8FB7-BE6F78911FB7}
 .custom instance void System.Runtime.CompilerServices.RefSafetyRulesAttribute::.ctor(int32) = ( 01 00 0B 00 00 00 00 00 ) 
 .imagebase 0x00400000
 .file alignment 0x00000200
 .stackreserve 0x00100000
 .subsystem 0x0003       // WINDOWS_CUI
 .corflags 0x00000001    //  ILONLY
-// Image base: 0x06C10000
+// Image base: 0x00E80000
 
 
 // =============== CLASS MEMBERS DECLARATION ===================

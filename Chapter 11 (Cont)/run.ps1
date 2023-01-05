@@ -1,4 +1,4 @@
-param([bool]$compile=$false)
+param([bool]$compile = $false)
 
 if ($compile) {
     Write-Host "Compiling Java files..."
@@ -8,6 +8,7 @@ if ($compile) {
     Write-Host "Compiling testlongjmp.c"
     gcc -Wall -g .\Cont\testlongjmp.c -o .\Cont\testlongjmp.exe 
     Write-Host "Done."
-} else {
+}
+else {
     dotnet fsi .\Cont\Contfun.fs .\Cont\Contimp.fs .\Cont\Icon.fs
 }
