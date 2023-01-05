@@ -1,13 +1,15 @@
 # PRDAT-Exam
 
-You can use these files in two ways:
+First, read [Prerequisites](#prerequisites)
+
+You can use the files provided in two ways:
 
 1. **`Project Mode`** **[RECOMMENDED]** - Everything is compiled automatically through the used IDE.
 2. **`Standalone Mode`** - You must compile and run everything manually.
 
 Each Chapter is supplied with a `PowerShell` script that when run, automatically can load required files into F# Interactive and compile required files.
 
-`run` is executed using following command in a PowerShell terminal, when in the same directory as the script:
+`run` is executed using the following command in a `PowerShell` terminal, when in the same directory as the script:
 
 ```ps1
 .\run.ps1
