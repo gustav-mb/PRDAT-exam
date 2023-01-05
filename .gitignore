@@ -792,3 +792,13 @@ replay_pid*
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,visualstudio,rider,intellij,csharp,fsharp,java
+
+# KEEP THE FOLLOWING FILES
+!**/Dependencies/fslex.exe
+!**/Dependencies/fsyacc.exe
+
+# Chapter 5 & 6
+!**/Chapter 5 & 6 (HigherFun)/Fun/Person.class
+!**/Chapter 5 & 6 (HigherFun)/Fun/Fun.class
+
+#
